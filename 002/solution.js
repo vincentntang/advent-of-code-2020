@@ -10,10 +10,7 @@ function passwordPhilosophy(arg) {
     const [lowerLimitMatch, upperLimitMatch] = passwordArray[0].split('-');
     const characterMatch = passwordArray[1][0];
     const sequenceMatch = passwordArray[2];
-    console.log(characterMatch,"char Match");
-    console.log(sequenceMatch,"SequenceMatch");
     const numberOfMatches = (sequenceMatch.match(new RegExp(characterMatch, "g")) || []).length;
-    console.log(numberOfMatches, "NUM MATCHES");
     if(numberOfMatches >= parseInt(lowerLimitMatch) && numberOfMatches <= parseInt(upperLimitMatch)){
       numberOfValidPasswords = numberOfValidPasswords + 1;
     }
